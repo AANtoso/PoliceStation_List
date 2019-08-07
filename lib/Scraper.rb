@@ -11,8 +11,8 @@ class PoliceStationScraper
 
     #policestation_list.drop(2).each do |policestation|
     #  station = PoliceStation.new
-    #  station.name = policestation.css("").text
-    #  atation.url = policestation.css("").attr().value
+    #  station.name = policestation.css("a").text
+    #  station.url = policestation.css("a").attr('href').value
     #  end
     #end
     #def self.scrape_policestation_specifications(policestation)
