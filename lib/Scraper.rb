@@ -9,6 +9,9 @@ class PoliceStationScraper
     parsed_html = Nokogiri.HTML(pg)
     station_list =
     parsed_html.css ("a")
+    station_list.each do |a|
+      name: a.css('Table-row Table-row--highlight a').text.strip,
+      url: a.css('a')[0].attr('href')
   #  html = open("https://www.policeone.com/law-enforcement-directory/")
   #  doc = Nokogiri::HTML(html)
 
