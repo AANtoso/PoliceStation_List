@@ -1,14 +1,14 @@
 class PoliceStation
 
-  attr_accessor :name, :url, :country, :address, :city, :state, :zipcode, :phonenumber 
+#  attr_accessor :name, :url, :country, :address, :city, :state, :zipcode, :phonenumber
 
-@@all = []
+#@@all = []
 
-  def initialize
-    @@all << self
-  end
+#  def initialize
+#    @@all << self
+#  end
 
-  def self.all
-    @@all
-  end
+#  def self.all
+#    @@all
+#  end
 end
