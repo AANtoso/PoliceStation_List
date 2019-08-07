@@ -2,8 +2,13 @@ require 'nokogiri'
 require 'open-uri'
 
 class PoliceStationScraper
-  #def self.scrape_policestation_list
+  BASE_URL = 'https://www.policeone.com/law-enforcement-directory/'
 
+  def self.scrape_policestationlist
+    pg = open(BASE_URL)
+    parsed_html = Nokogiri.HTML(pg)
+    station_list =
+    parsed_html.css ("a")
   #  html = open("https://www.policeone.com/law-enforcement-directory/")
   #  doc = Nokogiri::HTML(html)
 
