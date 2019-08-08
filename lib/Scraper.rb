@@ -31,7 +31,7 @@ class PoliceStationScraper
     #end
   def self.scrape_station_details(station)
     binding.pry
-    pg = open("https://www.policeone.com#{policestation.url}")
+    pg = open("https://www.policeone.com/Police-Departments/#{policestation.url}")
     doc = Nokogiri.HTML(pg)
   end
 end
