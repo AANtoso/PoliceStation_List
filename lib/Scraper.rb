@@ -4,7 +4,7 @@ require 'open-uri'
 class PoliceStationScraper
   BASE_URL = 'https://www.policeone.com/law-enforcement-directory/'
 
-  def self.scrape_policestationlist
+  def self.scrape_station_list
     pg = open(BASE_URL)
     doc = Nokogiri.HTML(pg)
     station_list = doc.css(".Table-body .Table-link").text
