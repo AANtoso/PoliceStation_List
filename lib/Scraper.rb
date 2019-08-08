@@ -8,6 +8,11 @@ class PoliceStationScraper
     pg = open(BASE_URL)
     doc = Nokogiri.HTML(pg)
     station_list = doc.css(".Table-body .Table-link").text
+    station_list.drop(2).each do |station|
+    policestation = station.new
+    policestation.name = station.css("a").text
+    policestation.url = station.css("a").attr('href').value
+    end
     # station_list =
     # parsed_html.css ("a")
     # station_list.each do |a|
@@ -26,7 +31,8 @@ class PoliceStationScraper
     #  station.url = policestation.css("a").attr('href').value
     #  end
     #end
-    #def self.scrape_policestation_specifications(policestation)
-    #  html = open()
-    #end
+  def self.scrape_station_details(station)
+    pg = open("https://www.policeone.com#{station.url}")
+    doc = Nokogiri.HTML(pg)
   end
+end
