@@ -63,20 +63,4 @@ class CLI
         end
         puts " "
       end
-    end
-
-
-#    puts " "
-#    pick_PoliceStation
-#  end
-
-#  def pick_PoliceStation
-#    input = ""
-#    while input != "exit" do
-
-#      puts "Choose your Police Station."
-#      puts "Enter a name or type 'exit' to exit."
-#      puts " "
-#    end
-  end
 end
