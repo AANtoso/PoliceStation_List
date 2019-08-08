@@ -1,5 +1,6 @@
 require 'nokogiri'
 require 'open-uri'
+require 'colorize'
 
 class PoliceStationScraper
   BASE_URL = 'https://www.policeone.com/law-enforcement-directory/'
