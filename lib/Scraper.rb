@@ -1,6 +1,7 @@
 require 'nokogiri'
 require 'open-uri'
 require 'colorize'
+require 'pry'
 
 class PoliceStationScraper
   BASE_URL = 'https://www.policeone.com/law-enforcement-directory/'
@@ -14,6 +15,7 @@ class PoliceStationScraper
     policestation = station.new
     policestation.name = station
     policestation.url = link_list[index]
+    binding.pry
     end
     # station_list =
     # parsed_html.css ("a")
