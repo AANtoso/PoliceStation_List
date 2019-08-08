@@ -5,12 +5,11 @@ class CLI
     puts "Here is a list of Police Stations."
     puts " "
         puts "----------------------------------"
-        puts " "
         PoliceStationScraper.scrape_station_list
         print_stations
-        pick_your_station
-        binding.pry
-        PoliceStation.find_all_by_name("")
+        # pick_your_station
+        PoliceStationScraper.scrape_station_details("Hi")
+        # PoliceStation.find_all_by_name("")
       end
 
 
@@ -21,7 +20,6 @@ class CLI
 
           puts "Choose your station!"
           puts "Enter a number for more information or type 'exit' to exit."
-          puts " "
 
           input = gets.strip.downcase
 
@@ -45,7 +43,6 @@ class CLI
             puts "Station Information:"
             puts " "
             puts "#{PoliceStation.all[input.to_i-1].station_information}"
-            puts " "
             puts " "
             puts "******************NEXT STATION********************"
             puts " "
