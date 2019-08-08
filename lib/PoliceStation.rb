@@ -1,6 +1,6 @@
 class PoliceStation
 
- attr_accessor :name, :url, :country, :address, :city, :state, :zipcode, :phonenumber
+ attr_accessor :name, :url, :station_name, :country, :address, :city, :state, :zipcode, :phonenumber
 
 @@all = []
 
