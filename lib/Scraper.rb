@@ -1,8 +1,3 @@
-require 'nokogiri'
-require 'open-uri'
-require 'colorize'
-
-
 class PoliceStationScraper
   BASE_URL = 'https://www.policeone.com/law-enforcement-directory/'
 
@@ -37,5 +32,6 @@ class PoliceStationScraper
   def self.scrape_station_details(station)
     pg = open("https://www.policeone.com#{station.url}")
     doc = Nokogiri.HTML(pg)
+    binding.pry
   end
 end

@@ -7,6 +7,7 @@ class CLI
         puts "----------------------------------"
         puts " "
         PoliceStationScraper.scrape_station_list
+        binding.pry
         print_stations
         pick_your_station
         PoliceStation.find_all_by_name("")
