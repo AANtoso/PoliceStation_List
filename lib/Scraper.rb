@@ -30,11 +30,15 @@ class PoliceStationScraper
     #  end
     #end
   def self.scrape_station_details(station)
-    pg = open("https://www.policeone.com/Police-Departments/#{policestation.url}")
+    pg = open("https://www.policeone.com#{station.url}")
     doc = Nokogiri.HTML(pg)
-    # station_details = doc.css("article[class=Article]").map
-    # station.station_name =
-    # station.country =
+    binding.pry
+    station.country = doc.css("dd[class=DefList-description]")[0].text
+    station.address = doc.css("dd[class=DefList-description]")[1].text
+    station.city = doc.css("dd[class=DefList-description]")[2].text
+    station.state = doc.css("dd[class=DefList-description]")[3].text
+    station.zipcode = doc.css("dd[class=DefList-description]")[4].text
+    station.phonenumber = doc.css("dd[class=DefList-description]")[6].text
 
   end
 end

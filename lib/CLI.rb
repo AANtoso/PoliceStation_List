@@ -13,12 +13,11 @@ class CLI
         puts "Enter a number for more information or type 'exit' to exit."
         puts " "
         input = gets.strip.downcase
-        binding.pry
-        PoliceStationScraper.scrape_station_details(PoliceStation.all[input.to_i-1]) if !PoliceStation.all[input.to_i-1].style
+        PoliceStationScraper.scrape_station_details(PoliceStation.all[input.to_i-1]) if !PoliceStation.all[input.to_i-1].station_name
         # pick_your_station
         # PoliceStation.find_all_by_name("")
+        end
       end
-    end
 
 
       # def pick_your_station
