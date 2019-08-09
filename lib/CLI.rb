@@ -29,7 +29,6 @@ class CLI
             puts "City: #{policestation.city }"
             puts "State: #{policestation.state}"
             puts "Zipcode: #{policestation.zipcode}"
-            puts "PhoneNumber: #{policestation.phonenumber}"
             puts " "
             puts "******************NEXT STATION********************"
             puts " "
