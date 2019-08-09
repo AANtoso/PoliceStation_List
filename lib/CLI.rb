@@ -41,7 +41,7 @@ class CLI
 
           elsif input != "exit"
             puts " "
-            puts "INVALID! please try again.".colorize(:color => :white, :background => :red)
+            puts "INVALID! Please try again.".colorize(:color => :white, :background => :red)
             puts " "
         end
        end
