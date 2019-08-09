@@ -19,22 +19,18 @@ class CLI
           puts "Enter a number for more information or type 'exit' to exit."
 
           input = gets.strip.downcase
+          policestation = PoliceStation.all[input.to_i-1]
 
-          if (1..PoliceStation.all.count).include?(input.to_i)
-            PoliceStationScraper.scrape_station_details(PoliceStation.all[input.to_i-1]) if !PoliceStation.all[input.to_i-1].country
+            if policestation
+            PoliceStationScraper.scrape_station_details(policestation) if !policestation.country
             puts " "
-            puts "Country: #{PoliceStation.all[input.to_i-1].country}"
-            puts "-------------------------------------------------------------------------------"
-            puts "Address: #{PoliceStation.all[input.to_i-1].address}"
-            puts "-------------------------------------------------------------------------------"
-            puts "City: #{PoliceStation.all[input.to_i-1].city }"
-            puts "-------------------------------------------------------------------------------"
-            puts "State: #{PoliceStation.all[input.to_i-1].state}"
-            puts "-------------------------------------------------------------------------------"
-            puts "Zipcode: #{PoliceStation.all[input.to_i-1].zipcode}"
-            puts "-------------------------------------------------------------------------------"
-            puts "PhoneNumber: #{PoliceStation.all[input.to_i-1].phonenumber}"
-            puts "-------------------------------------------------------------------------------"
+            puts "Country: #{policestation.country}"
+            puts "Address: #{policestation.address}"
+            puts "City: #{policestation.city }"
+            puts "State: #{policestation.state}"
+            puts "Zipcode: #{policestation.zipcode}"
+            puts "PhoneNumber: #{policestation.phonenumber}"
+            puts " "
             puts "******************NEXT STATION********************"
             puts " "
 
