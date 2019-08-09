@@ -8,7 +8,6 @@ class CLI
         PoliceStationScraper.scrape_station_list
         print_stations
         pick_your_station
-        # PoliceStation.find_all_by_name("")
         end
 
       def pick_your_station
