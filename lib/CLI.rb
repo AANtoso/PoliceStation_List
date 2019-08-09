@@ -24,8 +24,6 @@ class CLI
           if (1..PoliceStation.all.count).include?(input.to_i)
             PoliceStationScraper.scrape_station_details(PoliceStation.all[input.to_i-1]) if !PoliceStation.all[input.to_i-1].country
             puts " "
-            # puts "Station: #{PoliceStation.all[input.to_i-1].station_name}"
-            # puts "-------------------------------------------------------------------------------"
             puts "Country: #{PoliceStation.all[input.to_i-1].country}"
             puts "-------------------------------------------------------------------------------"
             puts "Address: #{PoliceStation.all[input.to_i-1].address}"
