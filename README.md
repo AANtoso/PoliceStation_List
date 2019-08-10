@@ -6,23 +6,23 @@ TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add this line to your application's IDE:
 
 ```ruby
-gem 'PoliceStation_List'
+git clone git@github.com:AANtoso/PoliceStation_List.git
 ```
 
 And then execute:
 
-    $ bundle
+    cd PoliceStation_List/
 
-Or install it yourself as:
+And then run the code:
 
-    $ gem install PoliceStation_List
+    ruby bin/run
 
 ## Usage
 
-TODO: Write usage instructions here
+Run this code to select a Police Station and get the details of that particular station. If needed, select an additional station to view it's specific details. Type 'exit' to exit when you are finished.
 
 ## Development
 
