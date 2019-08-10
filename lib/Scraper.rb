@@ -5,8 +5,9 @@ class PoliceStationScraper
     pg = open(BASE_URL)
     doc = Nokogiri.HTML(pg)
     station_list = doc.css(".Table-body .Table-link").map(&:text)
+    # station_list.pop
     link_list = doc.css(".Table-row").map{|link| link["href"]}
-    station_list.each_with_index do |station, index|
+    station_list.each.with_index(1) do |station, index|
     policestation = PoliceStation.new
     policestation.name = station
     policestation.url = link_list[index]

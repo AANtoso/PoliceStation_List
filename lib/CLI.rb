@@ -19,7 +19,7 @@ class CLI
           puts "Enter a number for more information or type 'exit' to exit."
 
           input = gets.strip.downcase
-          policestation = PoliceStation.all[input.to_i]
+          policestation = PoliceStation.all[input.to_i-1]
 
             if policestation
             PoliceStationScraper.scrape_station_details(policestation) if !policestation.country
