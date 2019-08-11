@@ -10,5 +10,4 @@ require_relative "./Scraper"
 
 module PoliceStationList
   class Error < StandardError; end
-  # Your code goes here...
 end
