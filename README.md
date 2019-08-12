@@ -1,8 +1,6 @@
 # PoliceStationList
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/PoliceStation_List`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Police Station List will show you a list of police stations. Upon selecting the station you would like to view from the list, you will be presented with the important/pertinent details of that station. If you would like to view another station, return to the list of the stations and select the next one you would like to view the details for. 
 
 ## Installation
 
@@ -22,7 +20,7 @@ And then run the code:
 
 ## Usage
 
-Run this code to select a Police Station and get the details of that particular station. If needed, select an additional station to view it's specific details. Type 'exit' to exit when you are finished.
+Run this code to select a Police Station and get the details of that particular station. If needed, go back to the list of stations and select an additional station to view it's specific details. Type 'exit' to exit when you are finished.
 
 ## Development
 
