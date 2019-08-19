@@ -21,12 +21,12 @@ class CLI
           input = gets.strip.downcase
           policestation = PoliceStation.all[input.to_i-1]
 
-            if policestation
-            PoliceStationScraper.scrape_station_details(policestation) if !policestation.country
+            if (1..PoliceStation.all.count).include?(input.to_i)
+              PoliceStationScraper.scrape_station_details(policestation) if !policestation.country
             puts " "
             puts "Country: #{policestation.country}"
             puts "Address: #{policestation.address}"
-            puts "City: #{policestation.city }"
+            puts "City: #{policestation.city}"
             puts "State: #{policestation.state}"
             puts "Zipcode: #{policestation.zipcode}"
             puts " "
