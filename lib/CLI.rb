@@ -32,7 +32,8 @@ class CLI
             puts " "
             puts "******************NEXT STATION********************"
             puts " "
-
+          elsif input.downcase == "s"
+            alphabetically_sort
           elsif input != "exit"
             puts " "
             puts "INVALID! Please try again.".colorize(:color => :white, :background => :red)
@@ -47,4 +48,10 @@ class CLI
         end
         puts " "
       end
+    def alphabetically_sort
+      abc_list = PoliceStation.all.sort {|a, b| a.name <=> b.name}
+      abc_list.each.with_index(1) do |station, index|
+        puts "#{index}. #{station.name}"
+      end
+    end
 end
