@@ -16,7 +16,7 @@ class CLI
         while input != "exit" do
 
           puts "Choose your station!"
-          puts "Enter a number for more information or type 'exit' to exit."
+          puts "Enter a number for more information, enter 's' to view an alphabetized list of the stations, or type 'exit' to exit."
 
           input = gets.strip.downcase
           policestation = PoliceStation.all[input.to_i-1]
